@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //irgendeine Scheiße; HIHIHI ; HAHAHAHAHAHAHAHAHAHA
+        //tim ist ein Yarro und er kann nichts dagegen machen XD;
         setContentView(null);
     }
 }
