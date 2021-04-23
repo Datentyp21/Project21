@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         //irgendeine Scheiße; HIHIHI ; HAHAHAHAHAHAHAHAHAHA
         //tim ist ein Yarro und er kann nichts dagegen machen XD;
         //DAS IST JA ECHT fabuLOUs
+        //Tim how could you leave us? - NF community aka Me, take the T and A out of Team and you are left with ME.
         setContentView(null);
     }
 }
