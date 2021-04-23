@@ -19,33 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         bar = findViewById(R.id.progressBar);
 
-
-        this.initialiseBar();
-
-    }
-    private void initialiseBar(){
-
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                int i = 0;
-                try {
-
-                    while(i < 100) {
-                        Thread.sleep(1000);
-                        i += 10;
-                        bar.setProgress(i);
-                    }
-
-
-                } catch(Exception exc){
-                    exc.printStackTrace();
-                }
-
-            }
-        });
-
-        thread.start();
+        bar.setIndeterminate(true);
+        bar.setScaleY(0.2f);
 
     }
 }
