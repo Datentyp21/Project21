@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         //irgendeine Scheiße; HIHIHI ; HAHAHAHAHAHAHAHAHAHA
         //tim ist ein Yarro und er kann nichts dagegen machen XD;
+        //DAS IST JA ECHT fabuLOUs
         setContentView(null);
     }
 }
