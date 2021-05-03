@@ -2,15 +2,20 @@ package com.example.project21;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-
 import com.example.project21.ui.login.LoginActivity;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
