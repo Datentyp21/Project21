@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
-import com.example.project21.ui.login.LoginActivity;
+
+import com.example.project21.ui.Login.LoginActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
