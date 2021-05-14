@@ -37,37 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new Thread(new Runnable(){
-
-            @Override
-            public void run() {
-
-                InetSocketAddress address = new InetSocketAddress("84.115.73.101", 5001);
-
-                try {
-
-                    Socket socket = new Socket();
-                    socket.connect(address, 10000);
-
-                    PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
-                    pw.println("8====D");
-                    pw.flush();
-
-                    Scanner s = new Scanner(new BufferedReader(new InputStreamReader(socket.getInputStream())));
-                    while(s.hasNextLine()){
-                        System.out.println("Antwort vom Server: " + s.nextLine());
-                    }
-                    pw.close();
-                    socket.close();
-
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }).start();
-
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
