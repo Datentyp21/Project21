@@ -2,12 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/item3"
-        android:title="Notifications"
+        android:title="Mitteilungen"
         android:icon="@drawable/ic_notifications"
+
         ></item>
     <item
         android:id="@+id/item2"
-        android:title="Calendar"
+        android:title="Stundenplan"
         android:icon="@drawable/ic_calendar"
         ></item>
     <item
@@ -17,12 +18,12 @@
         ></item>
     <item
         android:id="@+id/item4"
-        android:title="Room plan"
+        android:title="Raumplan"
         android:icon="@drawable/ic_map"
         ></item>
     <item
         android:id="@+id/item5"
-        android:title="More"
+        android:title="Mehr"
         android:icon="@drawable/ic_more"
         ></item>
 </menu>
