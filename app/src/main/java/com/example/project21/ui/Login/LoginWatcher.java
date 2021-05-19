@@ -29,7 +29,9 @@ public class LoginWatcher implements TextWatcher {
 
 
         if(handler.getEmail().getText().toString().contains("@21er.at") &&
-                handler.getPassword().getText().length() >= 8){
+                handler.getPassword().getText().length() >= 8 &&
+                (handler.getEmail().getText().toString().charAt(1) == '.' ||
+                        handler.getEmail().getText().toString().charAt(2) == '.')){
 
             handler.setSufficientPassword(true);
             handler.setVerifiedEmail(true);
