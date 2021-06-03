@@ -15,4 +15,13 @@
     <string name="guest_login">Als Gast anmelden</string>
     <string name="dummy_login">v.nachname@21er.at</string>
     <string name="dummy_password">********</string>
+    <string name="incorrect_data">Ungültige Anmeldedaten!</string>
+    <string name="password_reset">Passwort zurücksetzen</string>
+    <string name="reset_ID">Identifikationsnummer</string>
+    <string name="reset_continue">Weiter</string>
+    <string name="reset_password_new">Neues Passwort</string>
+    <string name="reset_password_again">Neues Passwort wiederholen</string>
+    <string name="incorrect_id">Ungültige Identifkationsnummer</string>
+    <string name="try_again_delay">Versuchen Sie es in einigen Minuten erneut.</string>
+
 </resources>
