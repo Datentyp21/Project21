@@ -23,5 +23,8 @@
     <string name="reset_password_again">Neues Passwort wiederholen</string>
     <string name="incorrect_id">Ungültige Identifkationsnummer</string>
     <string name="try_again_delay">Versuchen Sie es in einigen Minuten erneut.</string>
+    <string name="search">Suche</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Einstellungen</string>
 
 </resources>
