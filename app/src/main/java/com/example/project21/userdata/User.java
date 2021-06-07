@@ -27,7 +27,7 @@ public class User {
     }
     public boolean equals(User user){
 
-        if(user != null && User.hasCurrentUser()) {
+        if(user != null ) {
 
             if(this.getDataset().getRole() != Role.GUEST) {
 
