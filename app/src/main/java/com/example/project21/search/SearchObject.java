@@ -1,16 +1,17 @@
 package com.example.project21.search;
 
+import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 import com.example.project21.tools.Connection;
 
 public abstract class SearchObject {
 
-    private ImageView icon;
+    private Drawable icon;
     private String name;
     private Connection c;
 
-    public SearchObject(ImageView icon, String name, Connection c){
+    public SearchObject(Drawable icon, String name, Connection c){
 
         this.icon = icon;
         this.name = name;
@@ -18,7 +19,7 @@ public abstract class SearchObject {
 
     }
 
-    public ImageView getIcon() {
+    public Drawable getIcon() {
         return icon;
     }
 
