@@ -6,59 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".LoadingActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="92dp"
+        android:layout_height="54dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:contentDescription="@string/profile"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="93dp"
+        android:layout_height="53dp"
+        android:clickable="true"
+        android:contentDescription="@string/settings"
+        android:focusable="true"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_preferences" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="0dp"
-            android:layout_height="42dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:contentDescription="@string/profile"
-            android:focusable="true"
-            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
-
-        <SearchView
-            android:layout_width="227dp"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="85dp"
-            android:layout_height="42dp"
-            android:clickable="true"
-            android:contentDescription="@string/settings"
-            android:focusable="true"
-            app:srcCompat="@android:drawable/ic_menu_preferences" />
-
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="731dp">
-
-    </FrameLayout>
+    </SearchView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
 
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
         android:background="@color/cardview_dark_background"
         app:itemIconTint="@color/icon_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu">
+
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="324dp">
+
+        </FrameLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="321dp"
+        android:layout_height="627dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
