@@ -4,9 +4,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.project21.LoadingActivity;
 import com.example.project21.R;
-import com.example.project21.tools.ConnectAction;
 import com.example.project21.tools.Connection;
 import com.example.project21.userdata.Role;
 import com.example.project21.userdata.User;

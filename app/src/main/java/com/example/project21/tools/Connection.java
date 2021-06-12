@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.example.project21.LoadingActivity;
+import com.example.project21.search.UserSearchActivity;
 import com.example.project21.ui.Login.LoginActivity;
 import com.example.project21.ui.Login.PasswordResetActivity;
 import com.example.project21.ui.Login.PasswordResetContinueActivity;
@@ -19,7 +20,8 @@ public enum Connection {
     C5(LoadingActivity.class),
     C6(PasswordResetContinueActivity.class),
     C7(LoadingActivity.class),
-    C8(PasswordResetActivity.class);
+    C8(PasswordResetActivity.class),
+    CUSER(UserSearchActivity.class);
 
     private static Connection lastConnection;
 

@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project21">
+        <activity android:name=".search.UserSearchActivity"></activity>
         <activity android:name=".ui.Login.PasswordResetContinueActivity" />
         <activity android:name=".ui.Login.PasswordResetActivity" />
         <activity android:name=".ui.Login.LoginActivity" />
