@@ -7,20 +7,20 @@ import com.example.project21.tools.Connection;
 
 public abstract class SearchObject {
 
-    private Drawable icon;
+    private int iconID;
     private String name;
     private Connection c;
 
-    public SearchObject(Drawable icon, String name, Connection c){
+    public SearchObject(int iconID, String name, Connection c){
 
-        this.icon = icon;
+        this.iconID = iconID;
         this.name = name;
         this.c = c;
 
     }
 
-    public Drawable getIcon() {
-        return icon;
+    public int getIconID() {
+        return iconID;
     }
 
     public String getName() {

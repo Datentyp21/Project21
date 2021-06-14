@@ -19,20 +19,23 @@ import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.project21.R;
+import com.example.project21.search.IconAdapter;
 import com.example.project21.search.SearchObject;
 import com.example.project21.search.SystemObject;
+import com.example.project21.search.UserObject;
 import com.example.project21.tools.Connection;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class NavigationActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private SearchView sview;
     private ListView lview;
-    private ArrayAdapter<?> adapter;
 
-    private Resources res;
-    private String[] search;
+    private IconAdapter adapter;
+    private ArrayList<SearchObject> objectList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,29 +44,34 @@ public class NavigationActivity extends AppCompatActivity {
         lview = findViewById(R.id.listview);
         sview = findViewById(R.id.searchView);
 
-        res = getResources();
-        search = new String[]{new SystemObject(res.getDrawable(R.drawable.ic_calendar), "Kalender",
-                Connection.CUSER).getName(), new SystemObject(res.getDrawable(R.drawable.ic_calendar), "Kahllex",
-                Connection.CUSER).getName()};
+        objectList = new ArrayList<>();
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, search);
+        objectList.add(new UserObject("Alexander Hage", "a.hage@21er.at", Connection.CUSER));
+        objectList.add(new UserObject("Yolanda Hage", "y.hage@21er.at", Connection.CUSER));
+        objectList.add(new UserObject("Julian Hage", "j.hage@21er.at", Connection.CUSER));
+        objectList.add(new UserObject("Tim Dröpke", "t.droepke@21er.at", Connection.CUSER));
+        objectList.add(new SystemObject(R.drawable.ic_notifications, "Notifications", Connection.CUSER));
 
+        adapter = new IconAdapter(this, objectList);
 
         lview.setAdapter(adapter);
+
         lview.setVisibility(View.GONE);
 
         sview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 lview.setVisibility(View.VISIBLE);
-                NavigationActivity.this.adapter.getFilter().filter(query);
+
+                adapter.getFilter().filter(query);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 lview.setVisibility(View.VISIBLE);
-                NavigationActivity.this.adapter.getFilter().filter(newText);
+
+                adapter.getFilter().filter(newText);
                 return true;
             }
         });

@@ -6,7 +6,7 @@ import com.example.project21.tools.Connection;
 
 public class SystemObject extends SearchObject{
 
-    public SystemObject(Drawable icon, String name, Connection c) {
+    public SystemObject(int icon, String name, Connection c) {
         super(icon, name, c);
     }
 
