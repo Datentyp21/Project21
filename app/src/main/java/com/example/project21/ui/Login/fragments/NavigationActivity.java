@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import com.example.project21.R;
 import com.example.project21.search.IconAdapter;
 import com.example.project21.search.SearchObject;
+import com.example.project21.search.SeperateObject;
 import com.example.project21.search.SystemObject;
 import com.example.project21.search.UserObject;
 import com.example.project21.tools.Connection;
@@ -50,6 +51,7 @@ public class NavigationActivity extends AppCompatActivity {
         objectList.add(new UserObject("Yolanda Hage", "y.hage@21er.at", Connection.CUSER));
         objectList.add(new UserObject("Julian Hage", "j.hage@21er.at", Connection.CUSER));
         objectList.add(new UserObject("Tim Dröpke", "t.droepke@21er.at", Connection.CUSER));
+        objectList.add(new SeperateObject());
         objectList.add(new SystemObject(R.drawable.ic_notifications, "Notifications", Connection.CUSER));
 
         adapter = new IconAdapter(this, objectList);
@@ -61,17 +63,17 @@ public class NavigationActivity extends AppCompatActivity {
         sview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                lview.setVisibility(View.VISIBLE);
 
                 adapter.getFilter().filter(query);
+                lview.setVisibility(View.VISIBLE);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                lview.setVisibility(View.VISIBLE);
 
                 adapter.getFilter().filter(newText);
+                lview.setVisibility(View.VISIBLE);
                 return true;
             }
         });

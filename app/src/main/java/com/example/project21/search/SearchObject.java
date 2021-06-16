@@ -7,11 +7,11 @@ import com.example.project21.tools.Connection;
 
 public abstract class SearchObject {
 
-    private int iconID;
+    private Integer iconID;
     private String name;
     private Connection c;
 
-    public SearchObject(int iconID, String name, Connection c){
+    public SearchObject(Integer iconID, String name, Connection c){
 
         this.iconID = iconID;
         this.name = name;
@@ -19,7 +19,7 @@ public abstract class SearchObject {
 
     }
 
-    public int getIconID() {
+    public Integer getIconID() {
         return iconID;
     }
 
