@@ -17,8 +17,6 @@ public class notifications extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        boolean attachRoot;
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_notifications,container, attachRoot = false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_notifications, container, false);
     }
 }

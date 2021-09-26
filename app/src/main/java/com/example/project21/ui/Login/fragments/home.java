@@ -2,6 +2,8 @@ package com.example.project21.ui.Login.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -15,8 +17,7 @@ public class home extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        boolean attachRoot;
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home,container, attachRoot = false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_home, container, false);
+
     }
 }

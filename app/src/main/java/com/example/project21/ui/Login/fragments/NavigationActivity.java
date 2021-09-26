@@ -88,26 +88,26 @@ public class NavigationActivity extends AppCompatActivity {
         });
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setSelectedItemId(R.id.item1);
+        bottomNavigationView.setSelectedItemId(R.id.item_home);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
 
                 switch (item.getItemId()){
-                    case R.id.item1:
+                    case R.id.item_home:
                         fragment = new home();
                         break;
-                    case R.id.item2:
+                    case R.id.item_mitteilungen:
                         fragment = new notifications();
                         break;
-                    case R.id.item3:
+                    case R.id.item_stundenplan:
                         fragment = new timetable();
                         break;
-                    case R.id.item4:
+                    case R.id.item_raumplan:
                         fragment = new roomplan();
                         break;
-                    case R.id.item5:
+                    case R.id.item_mehr:
                         fragment = new more();
                         break;
                 }
