@@ -28,5 +28,6 @@
     <string name="settings">Einstellungen</string>
     <string name="home_button">Button</string>
     <string name="news_screen">news</string>
+    <string name="radiobutton">RadioButton</string>
 
 </resources>
